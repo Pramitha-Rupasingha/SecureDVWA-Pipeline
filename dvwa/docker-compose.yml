@@ -12,8 +12,8 @@ services:
     image: mysql:5.7
     container_name: dvwa-db
     environment:
-      MYSQL_ROOT_PASSWORD: dvwa
-      MYSQL_DATABASE: dvwa
-      MYSQL_USER: dvwa
-      MYSQL_PASSWORD: dvwa
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     restart: unless-stopped
