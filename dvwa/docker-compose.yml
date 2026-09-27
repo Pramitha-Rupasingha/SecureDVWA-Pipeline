@@ -6,6 +6,11 @@ services:
     container_name: dvwa
     ports:
       - "80:80"
+    volumes:
+      - ./vulnerabilities/sqli/source/low.php:/var/www/html/vulnerabilities/sqli/source/low.php
+      - ./vulnerabilities/xss_r/source/low.php:/var/www/html/vulnerabilities/xss_r/source/low.php
+      - ./vulnerabilities/exec/source/low.php:/var/www/html/vulnerabilities/exec/source/low.php
+      - ./vulnerabilities/csrf/source/low.php:/var/www/html/vulnerabilities/csrf/source/low.php
     restart: unless-stopped
 
   db:
