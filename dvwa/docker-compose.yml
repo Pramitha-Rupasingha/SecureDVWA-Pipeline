@@ -2,7 +2,10 @@ version: '3.8'
 
 services:
   dvwa:
-    image: vulnerables/web-dvwa
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: dvwa-local:latest
     container_name: dvwa
     ports:
       - "80:80"
