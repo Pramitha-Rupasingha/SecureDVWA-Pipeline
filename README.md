@@ -55,7 +55,7 @@ The `dvwa` container bundles its own MariaDB database process (listening on `127
    docker compose up -d --build
    ```
 
-4. Open `http://localhost` in your browser. On first run, follow the DVWA setup page to create/reset the database, then log in with the default DVWA credentials from the upstream DVWA documentation.
+4. Open `http://localhost/setup.php` in your browser and click **Create / Reset Database** to initialise the bundled database. Then go to `http://localhost/login.php` and log in with the default DVWA credentials (`admin` / `password`, unless changed).
 
 5. Stop the application:
    ```bash
@@ -84,4 +84,3 @@ No credentials are stored in the repository. The pipeline reads database setting
 
 - Threat model and risk assessment: [`docs/threat-model.md`](docs/threat-model.md)
 - Architecture diagram: [`docs/architecture-diagram.jpg`](docs/architecture-diagram.jpg)
-
