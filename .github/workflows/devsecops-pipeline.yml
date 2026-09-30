@@ -74,9 +74,10 @@ jobs:
 
       # GATE 2: SAST
       - name: Semgrep SAST Scan
-        uses: semgrep/semgrep-action@v1
-        with:
-          config: p/default
+        run: |
+          pip install semgrep
+          semgrep --version
+          semgrep scan --config p/default --config p/php --error
 
       # GATE 3: Dependency / Software Composition Scan
       - name: Trivy Dependency Scan
